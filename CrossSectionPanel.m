@@ -72,10 +72,10 @@ function ContainerPanel = CrossSectionPanel(fig, imgAxes, axesData)
     % Arrange uicontrol componenents within panel 
     function arrangePanelContents(plotwidth,plotheight)
         % Plot alignment
-        plotheight      = plotheight;
-        vertplotpad     = (1-plotheight)/2;
-        plotwidth       = plotwidth;
-        horzplotpad     = (1-plotwidth)/6;
+        plotheight  = plotheight;
+        vertplotpad = (1-plotheight)/2;
+        plotwidth   = plotwidth;
+        horzplotpad = (1-plotwidth)/6;
         % Button panel alignment
         btnpanelht  = plotheight/2;
         btnpanelw   = (1-plotwidth)/2; 
