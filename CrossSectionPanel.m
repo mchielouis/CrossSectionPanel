@@ -4,13 +4,15 @@
 %%%%
 
 %%%%
-% CrossSectionPanel is a UI/computational tool in the form of a matlab uipanel  
-% with functionality for analyzing images, or more generally, datapoints plotted
-% in a regular grid on a 2D region of matlab Axes. It provides an interface
-% for constructing a line through any two points on a regular grid 
-% (integer delimitered axes). The points that make up the line are recorded
-% where the line exits and enters each adjacent 1x1 grid square in its path.
-% Using these points and the segments they divide the line into, one can 
+%   CrossSectionPanel is a UI/computational tool in the form of a matlab 
+% uipanel with functionality for analyzing image cross-sections (or more 
+% generally, a cross-section of datapoints plotted in a regular grid on a 
+% 2D region in matlab axes). 
+%   It provides an interface for constructing a line through any two points 
+% on a regular grid (integer delimitered axes). The points that make up the
+% line are recorded where the line exits and enters each adjacent 1x1 grid 
+% square in its path.
+%   Using these points and the segments they divide the line into, one can 
 % plot a cross section of the image (or otherwise) along any straight line
 % drawn on the image. 
 %%%%
