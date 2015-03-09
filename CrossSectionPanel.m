@@ -4,9 +4,9 @@
 %%%%
 
 %%%%
-% CrossSectionPanel is a UI/computational tool designed to offer  
-% functionality for analyzing images, or more generally, datapoints plotted
-% in a regular grid in a 2D region in matlab Axes. It provides an interface
+% CrossSectionPanel is a UI/computational tool in the form of a matlab uipanel  
+% with functionality for analyzing images, or more generally, datapoints plotted
+% in a regular grid on a 2D region of matlab Axes. It provides an interface
 % for constructing a line through any two points on a regular grid 
 % (integer delimitered axes). The points that make up the line are recorded
 % where the line exits and enters each adjacent 1x1 grid square in its path.
@@ -15,8 +15,14 @@
 % drawn on the image. 
 %%%%
 
-% Construct the CrossSectionPanel ui component and return it as a
-% positionable uipanel
+%%%%
+% Parameter description:
+%%%%
+% fig:      The figure that is going to contain this uipanel. ContainerPanel is
+%           the uipanel returned by CrossSectionPanel().
+% imgAxes:  The axes which shall be the regular grid on which the 2D region of
+%           datapoints lies; in other words, our image to be cross-sectioned.
+% axesData: The datapoints themselves.
 function ContainerPanel = CrossSectionPanel(fig, imgAxes, axesData)
     
     %%%%                
@@ -25,8 +31,8 @@ function ContainerPanel = CrossSectionPanel(fig, imgAxes, axesData)
     
     % Existing line, line data, distance to points on line data
     currentZLine    = line([],[]);
-    x_y_p           = [[]];
-    D_Z             = [[]];
+    x_y_p           = [[];[]];
+    D_Z             = [[];[]];
     % Uipanel for plot and btnpanel
     ContainerPanel  =   uipanel(    'Title',    'Cross Section Plot',...
                                     'BackgroundColor','white');
@@ -253,5 +259,4 @@ function ContainerPanel = CrossSectionPanel(fig, imgAxes, axesData)
         plot(D_s,Z_s);
         
     end 
-end
 end
