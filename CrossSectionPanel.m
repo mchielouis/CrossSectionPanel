@@ -24,9 +24,9 @@ function ContainerPanel = CrossSectionPanel(fig, imgAxes, axesData)
     %%%%                
     
     % Existing line, line data, distance to points on line data
-    currentZLine	= line([],[]);
-    x_y_p           = [[]];
-    D_Z             = [[]];
+    currentZLine	    = line([],[]);
+    x_y_p               = [[]];
+    D_Z                 = [[]];
     % Uipanel for plot, edit, and buttons
     ContainerPanel	=	uipanel(	'Title'     ,'Cross Section Plot',...
                                     'BackgroundColor','white');
